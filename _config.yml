@@ -1,4 +1,6 @@
 title: dvdtsb's epic blog
 remote_theme: jekyll/minima
+minima:
+  skin: classic 
 header_pages:
   - index.md
