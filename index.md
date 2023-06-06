@@ -1,6 +1,6 @@
 ---
-title: im dvd
-description: Uhh this is a personal website or something
+title: home
+description: uhh this is a personal website or something
 ---
 
 
