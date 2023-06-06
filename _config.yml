@@ -1,5 +1,6 @@
 title: dvdtsb's epic blog
 remote_theme: jekyll/minima
+markdown: GFM
 minima:
   skin: classic 
 header_pages:
