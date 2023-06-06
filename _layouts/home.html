@@ -13,8 +13,8 @@ layout: base
 
     <h2>latests</h2>
     <ul>
-        {% for i in range(5) %}
-        <li><a href="{{ site.posts[i].url | relative_url }}">{{ site.posts[i].title }}</a> - {{ site.posts[i].date | date: date_format }}</li>
+        {% for post in site.posts limit:5 %}
+        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> - {{ post.date | date: date_format }}</li>
         {% endfor %}
     </ul>
 
