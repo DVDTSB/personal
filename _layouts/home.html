@@ -9,7 +9,7 @@ layout: base
 
     {{ content }}
 
-
+    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 
     <h2>latests</h2>
     <ul>
@@ -19,12 +19,14 @@ layout: base
     </ul>
 
     <h2>posts</h2>
+    <ul>
     {% for category in site.categories %}
-    <h3>{{ category[0] }}</h3>
+    <li><h3>{{ category[0] }}</h3></li>
     <ul>
         {% for post in category[1] %}
         <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> - {{ post.date | date: date_format }}</li>
         {% endfor %}
     </ul>
     {% endfor %}
+    </ul>
 </div>
