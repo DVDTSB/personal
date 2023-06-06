@@ -1,2 +1,6 @@
 title: dvdtsb's epic blog
 theme: minima
+minima:
+  skin: dark
+header_pages:
+  - index.md
