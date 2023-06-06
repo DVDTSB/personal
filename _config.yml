@@ -4,3 +4,4 @@ minima:
   skin: dark
 header_pages:
   - index.md
+show_excerpts: true
