@@ -4,4 +4,4 @@ minima:
   skin: classic 
 header_pages:
   - index.md
-permalink: /:title/
+permalink: /:categories/:title/
