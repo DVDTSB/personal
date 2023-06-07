@@ -4,7 +4,7 @@ category : "general-math"
 tags : [induction]
 ---
 
---work in progress--
+# --work in progress--
 
 ## introduction
 
@@ -32,7 +32,7 @@ We can also do the same thing but in the other direction, for example if we have
 **Proof:** Let $P(n)$ be the statement $1+2+\cdots+n=\frac{n(n+1)}{2}$.
 We will prove that $P(n)$ is true for all $n\geq 1$.
 
-**Base case:** $P(1)$ is true because $1=\frac{1(1+1)}{2}$.
+**Base case:** $P(1)$ is true because $1=\cfrac{1(1+1)}{2}$.
 
 **Inductive step:** Suppose that $P(n)$ is true for some $n\geq 1$, then we have
 $$1+2+\cdots+n+(n+1)=\frac{n(n+1)}{2}+(n+1)=\frac{n(n+1)+2(n+1)}{2}=\frac{(n+1)(n+2)}{2}$$
@@ -48,3 +48,54 @@ That was kinda cool, but we can do better.
 
 > **Example 2** Prove that for any natural number $n$ we have
 > $$1^2+2^2+\cdots+n^2=\frac{n(n+1)(2n+1)}{6}$$
+
+**Proof:** Let $P(n)$ be the statement $1^2+2^2+\cdots+n^2=\cfrac{n(n+1)(2n+1)}{6}$.
+We will prove that $P(n)$ is true for all $n\geq 1$.
+
+**Base case:** $P(1)$ is true because $1^2=\cfrac{1(1+1)(2\cdot 1+1)}{6}$.
+
+**Inductive step:** Suppose that $P(n)$ is true for some $n\geq 1$, then we have
+$$\begin{aligned}
+1^2+2^2+\cdots+n^2+(n+1)^2&=\frac{n(n+1)(2n+1)}{6}+(n+1)^2\\\\
+&=\frac{n(n+1)(2n+1)+6(n+1)^2}{6}\\\\
+&=\frac{(n+1)(n(2n+1)+6(n+1))}{6}\\\\
+&=\frac{(n+1)(2n^2+7n+6)}{6}\\\\
+&=\frac{(n+1)(n+2)(2n+3)}{6}\\\\
+&=\frac{(n+1)((n+1)+1)(2(n+1)+1)}{6}
+\end{aligned}$$
+So $P(n+1)$ is true.
+So by induction $P(n)$ is true for all $n\geq 1$.
+
+Other than weird identities like this, induction can be used to prove other stuff like inequalities.
+
+> **Example 3** Prove that for any natural number $n\geq 5$ we have
+> $$2^n>n^2$$
+
+**Proof:** Let $P(n)$ be the statement $2^n>n^2$.
+We will prove that $P(n)$ is true for all $n\geq 5$.
+
+**Base case:** $P(5)$ is true because $2^5=32>25=5^2$.
+
+**Inductive step:** Suppose that $P(n)$ is true for some $n\geq 5$, then we have
+$$2^{n+1}=2\cdot 2^n>2n^2>n^2+2n+1=(n+1)^2$$
+So $P(n+1)$ is true.
+So by induction $P(n)$ is true for all $n\geq 5$.
+
+> **Example 4**(Modulus Inequality) Prove that:
+> $$|a_1+a_2+\cdots+a_n|\leq |a_1|+|a_2|+\cdots+|a_n|$$
+
+**Proof:** Let $P(n)$ be the statement $|a_1+a_2+\cdots+a_n|\leq |a_1|+|a_2|+\cdots+|a_n|$.
+We will prove that $P(n)$ is true for all $n\geq 1$.
+
+**Base case:** $P(1)$ is true because $|a_1|=|a_1|$.
+Also $P(2)$ is true because $|a_1+a_2|\leq |a_1|+|a_2|$.
+**Inductive step:** Suppose that $P(n)$ is true for some $n\geq 1$, then we have
+$$\begin{aligned}
+|a_1+a_2+\cdots+a_n+a_{n+1}|&\leq |a_1+a_2+\cdots+a_n|+|a_{n+1}|\\\\
+&\leq |a_1|+|a_2|+\cdots+|a_n|+|a_{n+1}|
+\end{aligned}$$
+Here we used $P(2)$ for the first inequality and $P(n)$ for the second inequality.
+So $P(n+1)$ is true.
+So by induction $P(n)$ is true for all $n\geq 1$.
+
+
