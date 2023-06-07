@@ -4,7 +4,7 @@ category : "general math"
 tags : [induction]
 ---
 
--work in progress-
+--work in progress--
 
 ## introduction
 
