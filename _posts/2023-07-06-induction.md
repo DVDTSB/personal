@@ -1,6 +1,6 @@
 ---
 title: "intro to induction"
-category : "general math"
+category : "general-math"
 tags : [induction]
 ---
 
