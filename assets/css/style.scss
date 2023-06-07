@@ -1,0 +1,15 @@
+
+@import
+  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
+  "minima/initialize";
+
+
+  blockquote {
+    color: #002c53;
+    border-left: 4px solid #79c0ff;
+    padding-left: 15px;
+    /* font-size: 1.125rem; */
+    padding-bottom: 1px;
+    font-style: italic;
+    background-color: #e5f3ff;
+}
