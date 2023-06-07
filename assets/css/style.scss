@@ -1,11 +1,6 @@
 ---
 ---
 
-@import
-  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
-  "minima/initialize";
-
-
 blockquote {
     color: #002c53;
     border-left: 4px solid #79c0ff;
@@ -15,3 +10,10 @@ blockquote {
     font-style: italic;
     background-color: #e5f3ff;
 }
+
+@import
+  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
+  "minima/initialize";
+
+
+
