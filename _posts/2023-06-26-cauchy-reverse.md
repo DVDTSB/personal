@@ -52,3 +52,4 @@ $$ (a+b+c)- \sum_{cyc}\frac{b}{a^2+1}= \sum_{cyc}\frac{a^2b}{a^2+1}\leq \frac{ab
 So we have to prove:
 $$ ab+bc+ca \leq 3 \Longleftrightarrow ab+bc+ca\leq a^2+b^2+c^2$$
 Obvious by AM-GM.
+
