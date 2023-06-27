@@ -151,3 +151,11 @@ Since everything sounds cooler when you add *Cauchy* before it, we of course als
 - $P(n-1)$ is true if $P(n)$ is true.
 
 Then $P(n)$ is true for all $n$.
+
+
+> **Exercise** Try to prove AM-GM using Cauchy Induction.
+
+
+## exercises
+
+> **Exercise 1** Let $x_1=1$ and $x_{n+1}=x_n+\cfrac{1}{x_n}$ for all $n\geq 1$. Prove that $\cfrac{3\sqrt{n}}{2}\geq x_n \geq 2 \text{for all } n\geq 1$
