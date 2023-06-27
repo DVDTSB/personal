@@ -1,0 +1,42 @@
+{{ define "main" }}
+<header class="content__header">
+    <h1>{{ .Title | markdownify }}</h1>
+</header>
+{{ if .Params.toc }}
+<aside>
+</aside>
+{{ end }}
+<div class="content__body">
+    {{ .Content }}
+</div>
+<footer class="content__footer">
+</footer>
+{{ end }}
+
+{{define "aside" }}
+{{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
+{{ if or (.Params.author) (.Params.date) }}
+
+    {{ if .Params.author }}By {{ .Params.author }}{{ if .Date }}, {{ end }}{{ end }}
+    {{ if .Date }}{{ .Date.Format "2 June 2006" }}{{ end }}
+    {{ if .Params.tags }}
+    <br>
+    tags:
+    <ul>
+        {{ range .Params.tags }}
+        <li>
+            <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">{{ . }}</a>
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+
+{{ end }}
+
+
+<hr>
+On this page:
+{{ .TableOfContents }}
+
+
+{{ end }}

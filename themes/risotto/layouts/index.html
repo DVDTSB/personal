@@ -1,0 +1,21 @@
+{{ define "main" }}
+    {{ .Content }}
+    <ul>
+    {{ range ( where .Site.RegularPages "Type" "posts" | first 3 ) }}
+    <li><article class="post">
+        <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+        <span class="date">{{ .Date.Format "2 January 2006" }}</span>
+        <section class="post__summary">{{ .Summary }}</section>
+        tags:
+        <ul>
+          {{ range .Params.tags }}
+          <li>
+            <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">{{ . }}</a>
+          </li>
+          {{ end }}
+        </ul>
+      </article></li>
+    {{end}}
+    </ul>
+{{ end }}
+

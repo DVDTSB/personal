@@ -1,0 +1,24 @@
+baseURL = "https://dvdtsb.github.io/"
+languageCode = 'en-us'
+title = "dvdtsb's epic blog"
+theme = 'risotto'
+
+[params.about]
+title= "dvdtsb's epic blog"
+description= "the most epic blog ever or something"
+
+[params.theme]
+palette = "base16-dark"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "posts"
+    url = "/posts/"
+    weight = 10
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false

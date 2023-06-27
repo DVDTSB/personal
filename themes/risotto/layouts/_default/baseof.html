@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+
+<html lang="{{- site.Language.Lang -}}">
+
+<head>
+    {{- partial "head.html" . -}}
+
+</head>
+
+<body>
+    <div class="page">
+
+        <header class="page__header">
+            {{- partial "header.html" . -}}
+        </header>
+
+        <section class="page__body">
+            {{- block "main" . }}{{- end }}
+        </section>
+        
+        
+
+        <section class="page__aside">
+            <div class="aside__about">
+                {{- partial "about.html" . -}}
+            </div>
+            <hr>
+            <div class="aside__content">
+                {{- block "aside" . }}{{- end }}
+            </div>
+        </section>
+
+        
+
+
+        <footer class="page__footer">
+            <section class="page" style="grid-row-gap:0em">
+                <div id="comment-section" class></div>
+                <script>
+                initComments({
+                  node: document.getElementById("comment-section"),
+                  defaultHomeserverUrl: "https://matrix.cactus.chat:8448",
+                  serverName: "cactus.chat",
+                  siteName: "dvdtsb-github-blog",
+                  commentSectionId: "{{ .Path}}".replace('_', '') ,
+                })
+                function delay(time) {
+                    return new Promise(resolve => setTimeout(resolve, time));
+                }
+                
+                </script>
+            </section>
+            {{- partial "footer.html" . -}}
+        </footer>
+
+    </div>
+</body>
+
+</html>
