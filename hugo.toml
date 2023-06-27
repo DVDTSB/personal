@@ -17,8 +17,3 @@ palette = "base16-dark"
     name = "posts"
     url = "/posts/"
     weight = 10
-
-[markup]
-  [markup.tableOfContents]
-    endLevel = 3
-    ordered = false

@@ -1,1 +1,6 @@
 /* Override this file to customise the theme's CSS for your site */
+
+.date {
+    font-size: 0.8em;
+    color: var(--muted);
+}
