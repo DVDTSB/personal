@@ -38,6 +38,7 @@ So you can see from where the "reverse" part of the name comes from. Now let's s
 
 > **Example 2** Let $a,b,c$ be positive reals with sum 3. Prove
 > $$ \frac{b}{a^2+1}+\frac{c}{b^2+1}+\frac{a}{c^2+1}\geq \frac{3}{2}$$
+> 
 **Proof:** So same thing here, except we got each term multiplied by a variable. Trying the same thing as before, we get:
 $$ 3- \sum_{cyc}\frac{b}{a^2+1}=\sum_{cyc}\frac{a^2+1-b}{a^2+1}$$
 And this looks pretty bad (because it is). However, instead of subtracting each term from a $1$, why don't we try to see what happens if we subtract it from a constant $k$? So we get:
@@ -48,7 +49,6 @@ That made things pretty nice. Using this we have to prove:
 $$ (a+b+c)- \frac{b}{a^2+1}\sum_{cyc}\leq -\frac{3}{2}+(a+b+c)=\frac{3}{2}$$
 And 
 $$ (a+b+c)- \sum_{cyc}\frac{b}{a^2+1}= \sum_{cyc}\frac{a^2b}{a^2+1}\leq \frac{ab+bc+ca}{2}$$
-
 So we have to prove:
 $$ ab+bc+ca \leq 3 \Longleftrightarrow ab+bc+ca\leq a^2+b^2+c^2$$
 Obvious by AM-GM.
