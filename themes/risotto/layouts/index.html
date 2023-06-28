@@ -6,8 +6,7 @@
         <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
         <span class="date">{{ .Date.Format "2 January 2006" }}</span>
         <section class="post__summary">{{ .Summary }}</section>
-        tags:
-        <ul>
+        <ul class="tags">
           {{ range .Params.tags }}
           <li>
             <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">{{ . }}</a>

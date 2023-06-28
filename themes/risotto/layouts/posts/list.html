@@ -1,11 +1,11 @@
 {{ define "main" }}
 <header class="content__header">
-  <h1>{{ .Title | markdownify }}</h1>
+  <h1>posts</h1>
   {{ .Content }}
 </header>
 Here are the post on here, sorted by category:
 <section>
-  <h2>Categories</h2>
+  <h2>categories</h2>
   <ul>
     {{ range $taxonomy_term, $taxonomy := .Site.Taxonomies }} {{ if eq
     $taxonomy_term "categories" }} {{ with $.Site.GetPage (printf "/%s"
@@ -21,8 +21,7 @@ Here are the post on here, sorted by category:
             <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
             <span class="date">{{ .Date.Format "2 January 2006" }}</span>
             <section class="post__summary">{{ .Summary }}</section>
-            tags:
-            <ul>
+            <ul class="tags">
               {{ range .Params.tags }}
               <li>
                 <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">{{ . }}</a>
