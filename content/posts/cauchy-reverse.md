@@ -55,3 +55,8 @@ So we have to prove:
 $$ ab+bc+ca \leq 3 \Longleftrightarrow ab+bc+ca\leq a^2+b^2+c^2$$
 Obvious by AM-GM.
 
+> **Example 3** Let $a,b,c>0$ with $abc\geq 1$. Prove
+> $$ \frac{1}{a^3+2b^3+6}+\frac{1}{b^3+2c^3+6}+\frac{1}{c^3+2a^3+6}\leq \frac{1}{3}$$
+
+**Proof:** So lets just look at the condition for a bit. We can use it like:
+$$ \sum_{cyc} \frac{1}{a^3+2b^3+6}= \sum_{cyc} \frac{abc}{a^3\cdot abc+2b^3\cdot abc+6abc} \leq \sum_{cyc} \frac{abc}{a^3+2b^3+6abc}$$

@@ -22,11 +22,6 @@
 .tags li{
     display: inline;
 }
-.tags li::before{
-    content:"*";
-    position: relative;
-    color: var(--muted);
-}
 
 :root {
     zoom: 110%;
