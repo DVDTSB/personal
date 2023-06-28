@@ -23,6 +23,10 @@
     display: inline;
 }
 
+.tags li::after{
+    content: " ";
+}
+
 :root {
     zoom: 110%;
 }
