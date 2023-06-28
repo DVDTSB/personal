@@ -22,7 +22,7 @@
     {{ if .Params.tags }}
     <br>
     tags:
-    <ul>
+    <ul class="tags">
         {{ range .Params.tags }}
         <li>
             <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">{{ . }}</a>
