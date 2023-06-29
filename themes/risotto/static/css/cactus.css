@@ -63,22 +63,8 @@
 .cactus-editor > span {
     display: flex;
 }
-@keyframes textareaAnimation {
-    0% {
-      transform: scale(1);
-      box-shadow: 0 0 0.3em var(--cactus-border-color), inset 0 0 0.3em var(--cactus-border-color);
-    }
-    50% {
-      transform: scale(1.005);
-      box-shadow: 0 0 0.5em var(--cactus-border-color), inset 0 0 0.5em var(--cactus-border-color);
-    }
-    100% {
-      transform: scale(1);
-      box-shadow: 0 0 0.3em var(--cactus-border-color), inset 0 0 0.3em var(--cactus-border-color);
-    }
-  }
-  
-  .cactus-editor-textarea {
+
+.cactus-editor-textarea {
     display: flex;
     flex: 1;
     height: 9rem;
@@ -89,11 +75,9 @@
     background-color: transparent;
     color: inherit;
     font: inherit;
-    
-    animation: textareaAnimation 1s infinite;
-  }
+}
   
-  .cactus-editor-textarea:focus {
+.cactus-editor-textarea:focus {
     outline: none;
     animation: none;
   }

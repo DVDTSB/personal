@@ -68,8 +68,10 @@ p {
 
 /* Links */
 
+
 a:link, a:visited {
     color: var(--link);
+    transition: all 0.2s ease-in-out;
     text-shadow: 0 0 0.1rem var(--link);
 }
 
