@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="{{- site.Language.Lang -}}">
+
+<head>
+    {{- partial "head.html" . -}}
+
+</head>
+
+ <body>
+    <div class="page">
+        <header class="page__header">
+            {{- partial "header.html" . -}}
+        </header>
+        
+        
+    </div>
+    <!-- center a div horizontaly -->
+    <div style="display: flex; justify-content: center;">
+        <div style=" text-align: center;background-color:var(--off-bg); padding:2em;">
+            <p style="font-size:10em; padding:0.5em"><strong>404</strong></p>
+            <p>page not found <br>
+            you got the wrong address lmao
+            </p>
+            <p><a href="{{- "/" | relURL -}}" class="button">Go back</a></p>
+            <hr>
+            <p style="color:var(--muted)"><italic>also with does the 404 look like it has an eye lmao</italic></p>
+        </div>
+    </div>
+</body>
+
+</html>
