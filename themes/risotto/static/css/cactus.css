@@ -1,9 +1,9 @@
 
 :root {
     --cactus-text-color--soft: var(--muted);
-    --cactus-background-color--strong: #1a1a1a;
+    --cactus-background-color--strong: var(--base00);
     --cactus-border-color: var(--link);
-    --cactus-box-shadow-color: #1a1a1a;
+    --cactus-box-shadow-color: rgba(0, 0, 0, 0.2);
     --cactus-button-text-color: var(--off-fg);
     --cactus-button-color: var(--off-bg);
     --cactus-button-color--strong: var(--inner-bg);
@@ -63,7 +63,22 @@
 .cactus-editor > span {
     display: flex;
 }
-.cactus-editor-textarea {
+@keyframes textareaAnimation {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0.3em var(--cactus-border-color), inset 0 0 0.3em var(--cactus-border-color);
+    }
+    50% {
+      transform: scale(1.005);
+      box-shadow: 0 0 0.5em var(--cactus-border-color), inset 0 0 0.5em var(--cactus-border-color);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0.3em var(--cactus-border-color), inset 0 0 0.3em var(--cactus-border-color);
+    }
+  }
+  
+  .cactus-editor-textarea {
     display: flex;
     flex: 1;
     height: 9rem;
@@ -74,7 +89,17 @@
     background-color: transparent;
     color: inherit;
     font: inherit;
-}
+    
+    animation: textareaAnimation 1s infinite;
+  }
+  
+  .cactus-editor-textarea:focus {
+    outline: none;
+    animation: none;
+  }
+  
+
+
 .cactus-editor-textarea::placeholder {
     text-align: center;
     line-height: 8rem;
@@ -145,7 +170,6 @@
 .cactus-login-close {
     align-self: flex-end;
     position: relative;
-    margin: -2em;
     padding: 0;
     color: var(--cactus-button-color);
     scale: 2;
@@ -161,8 +185,8 @@
     cursor: pointer;
 }
 .cactus-login-close-icon {
-    inline-size: 20px;
-    block-size: 20px;
+    inline-size: 24px;
+    block-size: 16px;
 }
 .cactus-login-title {
     align-self: center;

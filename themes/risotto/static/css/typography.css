@@ -19,6 +19,7 @@ h6 {
     font-size: 1rem;
     margin: 1.5rem 0 0 0;
     font-weight: 600;
+    text-shadow: 0 0 0.5rem var(--fg), 0 0 2em var(--fg) ;
 }
 
 h1+h2,
@@ -53,6 +54,7 @@ h4:before,
 h5:before, 
 h6:before {
     color: var(--muted);
+    text-shadow:none;
 }
 
 h1:first-child {
@@ -68,10 +70,12 @@ p {
 
 a:link, a:visited {
     color: var(--link);
+    text-shadow: 0 0 0.1rem var(--link);
 }
 
 a:hover, a:active, a.active {
     color: var(--hover);
+    text-shadow: 0 0 0.4rem var(--hover), 0 0 1em var(--hover);
 }
 
 /* Lists */
@@ -158,6 +162,7 @@ pre {
 b,
 strong {
     font-weight: 600;
+    text-shadow: 0 0 0.5rem var(--fg);
 }
 
 /* Highlighting */

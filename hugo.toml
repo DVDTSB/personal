@@ -17,3 +17,20 @@ palette = "base16-dark"
     name = "posts"
     url = "/posts/"
     weight = 10
+
+[[params.socialLinks]]
+icon = "fa-brands fa-github"
+title = "GitHub"
+url = "https://github.com/DVDTSB"
+
+[[params.socialLinks]]
+icon = "fa-solid fa-discord"
+title = "Discord"
+url = "https://discord.gg/Ef39zuKe8K"
+
+[[params.socialLinks]]
+icon = "fa-solid fa-twitter"
+title = "Twitter"
+url = "https://twitter.com/dvdtsb"
+
+

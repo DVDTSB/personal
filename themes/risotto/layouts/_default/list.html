@@ -10,6 +10,8 @@
           <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
           <span class="date">{{ .Date.Format "2 January 2006" }}</span>
           <section class="post__summary">{{ .Summary }}</section>
+
+          {{ if .Params.tags }}
           <ul class="tags">
             {{ range .Params.tags }}
             <li>
@@ -17,6 +19,9 @@
             </li>
             {{ end }}
           </ul>
+          {{ end }}
+
+
         </article>
       </li>
     {{ end }}
