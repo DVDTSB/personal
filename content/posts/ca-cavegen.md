@@ -132,4 +132,11 @@ Anything below 0.4 is just a bunch of random dots, and anything above 0.6 is jus
 Notice that the caves are touching the edges of the grid, and that's not very nice because there is a very clear cut.
 To solve this we can make it less likely for the noise to generate when the cell is near the edge of the grid.
 
-For this we want to create a "falloff" function that is $0$ in the middle of the grid and $1$ at the edges. This is very easy to do, jus 
+For this we want to create a "falloff" function that is $0$ at the edges of the grid and $1$ at the center of the grid.
+We can get a few different falloff functions. Here are some:
+
+```python
+def elipseFalloff(x,y,width,height):
+    scale_x = (x - width/2) / (width/2)
+    scale_y = (y - height/2) / (height/2)
+    return math.sqrt(scale_x**2 + scale_y**2)
