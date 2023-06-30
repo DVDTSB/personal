@@ -15,7 +15,7 @@
     opacity: 0.90;
     padding: 0.25rem;
     -webkit-transform: translate3d(0, 0, 0);
-    box-shadow: 0 0 0 0.25rem var(--logo), 0 0 20em 1em var(--link);
+    box-shadow: 0 0 0 0.25rem var(--logo), 0 0 20em 0em var(--link);
 
 }
 

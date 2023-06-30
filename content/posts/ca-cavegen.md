@@ -139,4 +139,14 @@ We can get a few different falloff functions. Here are some:
 def elipseFalloff(x,y,width,height):
     scale_x = (x - width/2) / (width/2)
     scale_y = (y - height/2) / (height/2)
-    return math.sqrt(scale_x**2 + scale_y**2)
+    return 1-math.sqrt(scale_x**2 + scale_y**2)
+
+def linearFalloff(x,y,width,height):
+    scale_x = (x - width/2) / (width/2)
+    scale_y = (y - height/2) / (height/2)
+    return max(abs(scale_x),abs(scale_y))
+```
+
+We can also manipulate them using a function like $f(x) = x^5$ to make them more or less steep.
+
+Finally, we want where there fallout function is bigger to 
