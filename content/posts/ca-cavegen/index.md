@@ -49,7 +49,7 @@ grid = generateCave(128,128,0.5)
 
 And that looks like this:
 
-<img src="/images/random_cave.png" style="width:60%">
+<img src="random_cave.png" style="width:60%">
 
 Not very cave-like, is it? It's just a bunch of random dots. Let try to use cellular automata to make it look more like a cave.
 
@@ -112,7 +112,7 @@ grid = generateCave(128,128,0.5,5)
 
 And here is how each step looks like:
 
-<img src="/images/ca_cave.gif" style="width:60%">
+<img src="ca_cave.gif" style="width:60%">
 
 We can see that the cellular automata makes shapes in the noise, and it smooths the shape out.
 Let's also look at other `fillProb` values:
@@ -120,10 +120,10 @@ Let's also look at other `fillProb` values:
 Anything below 0.4 is just a bunch of random dots, and anything above 0.6 is just a big blob.
 <table>
 <tr>
-<td><img src="/images/ca_cave_0.4.gif" style="width:100%"></td>
-<td><img src="/images/ca_cave_0.45.gif" style="width:100%"></td>
-<td><img src="/images/ca_cave_0.5.gif" style="width:100%"></td>
-<td><img src="/images/ca_cave_0.55.gif" style="width:100%"></td>
+<td><img src="ca_cave_0.4.gif" style="width:100%"></td>
+<td><img src="ca_cave_0.45.gif" style="width:100%"></td>
+<td><img src="ca_cave_0.5.gif" style="width:100%"></td>
+<td><img src="ca_cave_0.55.gif" style="width:100%"></td>
 </tr>
 </table>
 
