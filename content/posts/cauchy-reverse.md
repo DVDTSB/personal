@@ -60,3 +60,6 @@ Obvious by AM-GM.
 
 **Proof:** So lets just look at the condition for a bit. We can use it like:
 $$ \sum_{cyc} \frac{1}{a^3+2b^3+6}= \sum_{cyc} \frac{abc}{a^3\cdot abc+2b^3\cdot abc+6abc} \leq \sum_{cyc} \frac{abc}{a^3+2b^3+6abc}$$
+
+Now we can use Cauchy Reverse. We have to prove:
+$$ 3-\sum_{cyc} \frac{abc}{a^3+2b^3+6abc}\leq 1 \Longleftrightarrow \sum_{cyc} $$

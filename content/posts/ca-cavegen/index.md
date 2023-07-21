@@ -135,18 +135,60 @@ To solve this we can make it less likely for the noise to generate when the cell
 For this we want to create a "falloff" function that is $0$ at the edges of the grid and $1$ at the center of the grid.
 We can get a few different falloff functions. Here are some:
 
+<table>
+<tr>
+<td>
+
 ```python
 def elipseFalloff(x,y,width,height):
     scale_x = (x - width/2) / (width/2)
     scale_y = (y - height/2) / (height/2)
     return 1-math.sqrt(scale_x**2 + scale_y**2)
+```
 
+</td>
+<td>
+
+<img src="elipse_falloff.png" style="width:100%">
+
+</td>
+</tr>
+<tr>
+<td>
+
+```python
 def linearFalloff(x,y,width,height):
     scale_x = (x - width/2) / (width/2)
     scale_y = (y - height/2) / (height/2)
-    return max(abs(scale_x),abs(scale_y))
+    return 1-max(abs(scale_x),abs(scale_y))
 ```
+</td>
 
-We can also manipulate them using a function like $f(x) = x^5$ to make them more or less steep.
+<td>
 
-Finally, we want where there fallout function is bigger to 
+<img src="linear_falloff.png" style="width:100%">
+
+</td>
+</tr>
+</table>
+
+
+We can also manipulate them using a function like $f(x) = x^5$ to make them more or less steep, play around with it and see what you like.
+
+Finally, we want where there fallout function is smaller to be more likely to be empty space, so we can multiply the fill probability by the fallout function.
+
+```python
+def generateCave(width,height,fillProb,steps):
+    grid = [[0 for i in range(width)] for j in range(height)]
+    for i in range(width):
+        for j in range(height):
+            if random.random() > fillProb * falloff(i,j,width,height):
+                grid[i][j] = 1
+    for i in range(steps):
+        grid = doSimulationStep(grid)
+    return grid
+```
+ 
+ ### Get the biggest region
+
+ Now we can just perform a little searching for the biggest region. We just use the recursive Fill algorithm.
