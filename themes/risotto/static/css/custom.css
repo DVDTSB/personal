@@ -31,6 +31,15 @@
     zoom: 110%;
 }
 
+
+
+mjx-container{
+  display: inline-grid;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
 img {
     display: block;
     margin-left : auto;

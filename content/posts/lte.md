@@ -36,7 +36,8 @@ This thing has some nice properties:
 
 For 7. one thing about the digits in base $p$.
 
->**Exercise:** Show that $gcd(a,b,c)=\frac{a\cdot b\cdot c \cdot lcm(a,b,c)}{lcm(a,b)\cdot lcm(b,c) \cdot lcm(c,a)}$
+>**Exercise:** Show that 
+>$$gcd(a,b,c)=\frac{a\cdot b\cdot c \cdot lcm(a,b,c)}{lcm(a,b)\cdot lcm(b,c) \cdot lcm(c,a)}$$
 
 ## Weak LTE
 
@@ -124,7 +125,7 @@ $$
 
 **Proof.** Do the same things with the other lemma.
 
-## $p-2$ thing
+## p-2 thing
 
 The nerds among you might whine about why did we assume $p$ is odd. TLDR: cuz we have a $\frac{p-1}{2}$ in the proof. However we can have something for $p=2$ too.
 
