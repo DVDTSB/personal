@@ -2,7 +2,7 @@
 title: "cauchy reverse"
 categories : "algebra"
 tags : [inequality, cauchy, am-gm]
-summary: "a short introduction to mathematical induction"
+summary: "a short introduction to the cauchy reverse thing"
 date: "2023-06-26"
 ---
 
